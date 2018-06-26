@@ -13,7 +13,7 @@ needs_update(_AppDir, _Resource) -> true.
 download(AppDir, {local, Path}, _State) ->
   download(AppDir, {local, Path, {exclude, []}}, _State);
 download(AppDir, {local, Path, {exclude, Exclusions}}, State) ->
-  Files = dep_files(filename:join([rebar_state:dir(State), "local", Path]), Exclusions),
+  Files = dep_files(filename:join([rebar_state:dir(State), local, Path]), Exclusions),
   {rebar_file_utils:cp_r(Files, AppDir), undefined}.
 
 dep_files(FromDir, Exclusions) ->
