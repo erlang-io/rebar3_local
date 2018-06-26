@@ -1,5 +1,5 @@
 {application, rebar3_local,
- [{description, "A rebar plugin"},
+ [{description, "rebar3 plugin for local dependencies and plugins"},
   {vsn, "0.1.0"},
   {registered, []},
   {applications,
