@@ -20,6 +20,7 @@ init(State) ->
             {short_desc, "A rebar plugin"},
             {desc, "A rebar plugin"}
     ]),
+    rebar_state:add_resource(State, {local, rebar3_local_resource}),
     {ok, rebar_state:add_provider(State, Provider)}.
 
 
